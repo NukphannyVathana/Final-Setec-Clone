@@ -11,30 +11,435 @@
 
 <body>
 
-    <header>
+    <!-- Hamburger Drawer -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+    <div class="drawer-overlay">
+        <label for="menu-toggle" class="drawer-backdrop"></label>
+    </div>
+    <div class="nav-drawer">
+        <div class="drawer-header">
+            <img src="./Src/assets/Img/ZANDO-NEW-LOGO-2025.png" alt="Zando Logo" class="drawer-logo">
+            <label for="menu-toggle" class="drawer-close-btn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+        <div class="drawer-content">
+            <ul class="drawer-categories">
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">KIDS</a></li>
+                <li><a href="#">Z.HOME</a></li>
+                <li><a href="#">LIFESTYLE</a></li>
+            </ul>
+            <div class="drawer-divider"></div>
+            <ul class="drawer-links">
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Trending Now</a></li>
+                <li><a href="#">Biggest Savings Ever</a></li>
+            </ul>
+            <div class="drawer-divider"></div>
+            <div class="drawer-auth">
+                <a href="#" class="drawer-btn-login">LOGIN</a>
+                <a href="#" class="drawer-btn-register">REGISTER</a>
+            </div>
+        </div>
+    </div>
+
+    <header id="siteHeader">
+        <input type="checkbox" id="search-toggle" class="search-toggle-checkbox">
         <nav class="nav">
+            <!-- Left: hamburger (mobile) + categories (desktop) -->
             <div class="nav-left">
-                <ul>
-                    <li><a href="#">WOMEN</a></li>
-                    <li><a href="#">MEN</a></li>
-                    <li><a href="#">KIDS</a></li>
-                    <li><a href="#">Z.HOME</a></li>
-                    <li><a href="#">LIFESTYLE</a></li>
+                <label for="menu-toggle" class="hamburger-btn" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </label>
+                <ul class="nav-categories">
+                    <li class="has-megamenu">
+                        <a href="#" class="nav-link-women">WOMEN</a>
+                        <div class="megamenu">
+                            <div class="megamenu-container">
+                                <!-- Column 1: New In -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">New In</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#" class="item-red">All</a></li>
+                                        <li><a href="#" class="item-red">Beauty</a></li>
+                                        <li><a href="#">Lifestyle</a></li>
+                                        <li><a href="#">Smart Casual</a></li>
+                                        <li><a href="#">Sportlife</a></li>
+                                        <li><a href="#">New In Top</a></li>
+                                        <li><a href="#">New In Bottom</a></li>
+                                        <li><a href="#">New In Dress</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2: Clothing -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Clothing</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Top</a></li>
+                                        <li><a href="#">Dresses</a></li>
+                                        <li><a href="#">T-Shirts</a></li>
+                                        <li><a href="#">Polo Shirts</a></li>
+                                        <li><a href="#">Shirts & Blouses</a></li>
+                                        <li><a href="#">Jumpsuits</a></li>
+                                        <li><a href="#">Blazers & Jackets</a></li>
+                                        <li><a href="#">Vests & Cardigans</a></li>
+                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#">Sportswear</a></li>
+                                        <li><a href="#">Skirts & Shorts</a></li>
+                                        <li><a href="#">Trousers</a></li>
+                                        <li><a href="#">Shorts</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Sleepwear</a></li>
+                                        <li><a href="#">Undergarment</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 3: Accessories -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Accessories</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Bags</a></li>
+                                        <li><a href="#">Belts</a></li>
+                                        <li><a href="#">Caps & Hats</a></li>
+                                        <li><a href="#">Glasses</a></li>
+                                        <li><a href="#">Merchandise</a></li>
+                                        <li><a href="#">Hair Accessories</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 4: Shoes -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Shoes</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Running Shoes</a></li>
+                                        <li><a href="#">Heels</a></li>
+                                        <li><a href="#">Sandals</a></li>
+                                        <li><a href="#">Sneakers</a></li>
+                                        <li><a href="#">Flats & Loafers</a></li>
+                                        <li><a href="#">Socks</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 5: Shop by collection -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Shop by collection</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">CLOCK IT</a></li>
+                                        <li><a href="#">Oxfit Atelier</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 6: SALE -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title title-red">SALE</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#" class="item-red">Clothing</a></li>
+                                        <li><a href="#" class="item-red">Accessories</a></li>
+                                        <li><a href="#" class="item-red">Shoes</a></li>
+                                        <li><a href="#" class="item-red">Shop by collection</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-megamenu">
+                        <a href="#">MEN</a>
+                        <div class="megamenu">
+                            <div class="megamenu-container">
+                                <!-- Column 1: New In -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">New In</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#" class="item-red">All</a></li>
+                                        <li><a href="#" class="item-red">Beauty</a></li>
+                                        <li><a href="#">Lifestyle</a></li>
+                                        <li><a href="#">Smart Casual</a></li>
+                                        <li><a href="#">Sportlife</a></li>
+                                        <li><a href="#">New In Top</a></li>
+                                        <li><a href="#">New In Bottom</a></li>
+                                        <li><a href="#">New In Outerwear</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2: Clothing -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Clothing</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Shirts</a></li>
+                                        <li><a href="#">T-Shirts</a></li>
+                                        <li><a href="#">Polo Shirts</a></li>
+                                        <li><a href="#">Blazers & Jackets</a></li>
+                                        <li><a href="#">Vests & Cardigans</a></li>
+                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#">Sportswear</a></li>
+                                        <li><a href="#">Pants & Sweatpants</a></li>
+                                        <li><a href="#">Trousers</a></li>
+                                        <li><a href="#">Shorts</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Boxers</a></li>
+                                        <li><a href="#">Sleepwear</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 3: Accessories -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Accessories</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Tie</a></li>
+                                        <li><a href="#">Bags</a></li>
+                                        <li><a href="#">Belts</a></li>
+                                        <li><a href="#">Caps & Hats</a></li>
+                                        <li><a href="#">Glasses</a></li>
+                                        <li><a href="#">Merchandise</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 4: Shoes -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Shoes</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Running Shoes</a></li>
+                                        <li><a href="#">Sandals</a></li>
+                                        <li><a href="#">Sneakers</a></li>
+                                        <li><a href="#">Socks</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 5: Shop by collection -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Shop by collection</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">CLOCK IT</a></li>
+                                        <li><a href="#">Oxfit Atelier</a></li>
+                                        <li><a href="#">Through The Mist</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 6: SALE -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title title-red">SALE</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#" class="item-red">Clothing</a></li>
+                                        <li><a href="#" class="item-red">Accessories</a></li>
+                                        <li><a href="#" class="item-red">Shoes</a></li>
+                                        <li><a href="#" class="item-red">Shop by collection</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- KIDS -->
+                    <li class="has-megamenu">
+                        <a href="#">KIDS</a>
+                        <div class="megamenu">
+                            <div class="megamenu-container">
+                                <!-- Column 1: Boys -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Boys</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Clothing</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#" class="item-red">SALE</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2: Girls -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Girls</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Hair Accessories</a></li>
+                                        <li><a href="#">Clothing</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#" class="item-red">SALE</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Z.HOME -->
+                    <li class="has-megamenu">
+                        <a href="#">Z.HOME</a>
+                        <div class="megamenu">
+                            <div class="megamenu-container">
+                                <!-- Column 1: Bedroom Essentials -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Bedroom Essentials</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Pillow</a></li>
+                                        <li><a href="#">Cushions</a></li>
+                                        <li><a href="#">Mattress</a></li>
+                                        <li><a href="#">Quilt</a></li>
+                                        <li><a href="#">Pillow Case</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2: Bath Essentials -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Bath Essentials</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Towels</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 3: Living Essentials -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Living Essentials</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Mat</a></li>
+                                        <li><a href="#">Slippers</a></li>
+                                        <li><a href="#">Home Decoration</a></li>
+                                        <li><a href="#">Basket & Organizer</a></li>
+                                        <li><a href="#">Hangers & Clothing Care</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 4: Kitchen Essentials -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Kitchen Essentials</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Tableware</a></li>
+                                        <li><a href="#">Food Storage Containers</a></li>
+                                        <li><a href="#">Kitchen Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- LIFESTYLE -->
+                    <li class="has-megamenu">
+                        <a href="#">LIFESTYLE</a>
+                        <div class="megamenu">
+                            <div class="megamenu-container">
+                                <!-- Column 1: Toys & Collectibles -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Toys & Collectibles</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Blind Boxes</a></li>
+                                        <li><a href="#">Toys</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2: Home & Living -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Home & Living</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Storage</a></li>
+                                        <li><a href="#">Kitchen & Dining</a></li>
+                                        <li><a href="#">Home Accessories</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 3: Fragrance & Personal Care -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Fragrance & Personal Care</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Fragrance</a></li>
+                                        <li><a href="#">Personal Care</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 4: Travel & Outdoor -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Travel & Outdoor</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Drinkware</a></li>
+                                        <li><a href="#">Outdoor Essential</a></li>
+                                        <li><a href="#">Luggage</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 5: Accessories -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Accessories</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Keychains & Charms</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="#">Hair Accessories</a></li>
+                                        <li><a href="#">Hats & Caps</a></li>
+                                        <li><a href="#">Socks</a></li>
+                                        <li><a href="#">Umbrellas</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 6: Plushies -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Plushies</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Plush Toys</a></li>
+                                        <li><a href="#">Plush Pillows</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 7: Stationery -->
+                                <div class="megamenu-col">
+                                    <h4 class="megamenu-title">Stationery</h4>
+                                    <ul class="megamenu-list">
+                                        <li><a href="#">All</a></li>
+                                        <li><a href="#">Stickers</a></li>
+                                        <li><a href="#">Books</a></li>
+                                        <li><a href="#">Stationery Sets</a></li>
+                                        <li><a href="#">Writing Supplies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
-            <div class="nav-center Logo">
-                <a href="#"><img src="./Src/assets/Img/ZANDO-NEW-LOGO-2025.png" alt="Logo"></a>
+            <!-- Center: Logo -->
+            <div class="nav-center">
+                <a href="#"><img src="./Src/assets/Img/ZANDO-NEW-LOGO-2025.png" alt="ZANDO"></a>
             </div>
 
+            <!-- Right: search + icons -->
             <div class="nav-right">
-                <div class="Search">
-                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" placeholder="Search">
+                <div class="Search" id="searchTrigger">
+                    <label for="search-toggle" class="search-trigger-label" aria-label="Open search">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span class="search-text-placeholder">Search</span>
+                    </label>
                 </div>
 
                 <div class="nav-icons">
@@ -69,12 +474,39 @@
                         </a>
                     </div>
                     <div class="User">
-                        <a href="#">Login</a>
-                        <a href="#">Register</a>
+                        <a href="#">LOGIN</a>
+                        <a href="#">REGISTER</a>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Full-width Search Overlay Bar -->
+        <div class="search-overlay-bar" id="searchOverlayBar">
+            <div class="search-overlay-container">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-overlay-input" id="searchOverlayInput"
+                        placeholder="What are you searching for?" autocomplete="off">
+                    <div class="search-overlay-actions">
+                        <button type="button" class="search-overlay-btn search-submit-btn" aria-label="Submit search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                        <label for="search-toggle" class="search-overlay-btn search-close-btn" id="searchCloseBtn"
+                            aria-label="Close search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="content">
         <div id="Img-Main-Container">
@@ -190,8 +622,8 @@
             </label>
         </div>
 
-        <div id="loop-img">
-            <div>
+        <div class="slider-container">
+            <div class="slider-track">
                 <a href="#">
                     <img src="./Src/assets/Img/All_under_$9.99_Cat (2160x543)-100.jpg" alt="Loop Image 1">
                 </a>
@@ -215,233 +647,736 @@
         </div>
 
         <div class="products">
-            <div id="Biggest-Savings-Ever">
-                <h2>⏰ Biggest Savings Ever 💰</h2>
-                <a href="#">SEE MORE</a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/1.jpg" alt="Product 1">
-                    <p>$19.99</p>
-                    <h3>Product 1</h3>
-                </a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/2.jpg" alt="Product 2">
-                    <p>$29.99</p>
-                    <h3>Product 2</h3>
-                </a>
-
-                <div class="product">
-                    <img src="./Src/assets/Img/3.jpg" alt="Product 3">
-                    <p>$39.99</p>
-                    <h3>Product 3</h3>
+            <div id="Biggest-Savings-Ever" class="product-section">
+                <div class="section-header">
+                    <h2>⏰ Biggest Savings Ever 💰</h2>
+                    <a href="#">SEE MORE</a>
                 </div>
 
-                <div class="product">
-                    <img src="./Src/assets/Img/4.jpg" alt="Product 4">
-                    <p>$49.99</p>
-                    <h3>Product 4</h3>
-                </div>
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/PTAK0083-cr-450x672.jpg" alt="Product 1">
+                        <p>$19.99</p>
+                        <h3>Product 1</h3>
+                    </a>
 
-                <div class="product">
-                    <img src="./Src/assets/Img/5.jpg" alt="Product 5">
-                    <p>$59.99</p>
-                    <h3>Product 5</h3>
-                </div>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/PTAK0232-cr-450x672.jpg" alt="Product 2">
+                        <p>$29.99</p>
+                        <h3>Product 2</h3>
+                    </a>
 
-                <div class="product">
-                    <img src="./Src/assets/Img/6.jpg" alt="Product 6">
-                    <p>$69.99</p>
-                    <h3>Product 6</h3>
-                </div>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/PTAK0072-cr-450x672.jpg" alt="Product 3">
+                        <p>$39.99</p>
+                        <h3>Product 3</h3>
+                    </a>
 
-                <div class="product">
-                    <img src="./Src/assets/Img/7.jpg" alt="Product 7">
-                    <p>$79.99</p>
-                    <h3>Product 7</h3>
-                </div>
-
-                <div class="product">
-                    <img src="./Src/assets/Img/8.jpg" alt="Product 8">
-                    <p>$89.99</p>
-                    <h3>Product 8</h3>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/STU_1758-cr-450x672-1.jpg" alt="Product 4">
+                        <p>$49.99</p>
+                        <h3>Product 4</h3>
+                    </a>
                 </div>
             </div>
 
-            <div id="Everyday-Accessories">
-                <h2>🧩 Everyday Accessories ✨</h2>
-                <a href="#">SEE MORE</a>
+            <div id="Everyday-Accessories" class="product-section">
+                <div class="section-header">
+                    <h2>🧩 Everyday Accessories ✨</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/9.jpg" alt="Product 9">
-                    <p>$9.99</p>
-                    <h3>Product 9</h3>
-                </a>
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/10S26CAP012 - BLACK (2)-cr-450x672.jpg" alt="Product 9">
+                        <p>$9.99</p>
+                        <h3>Product 9</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/10.jpg" alt="Product 10">
-                    <p>$19.99</p>
-                    <h3>Product 10</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/TAKK8507-cr-450x672.jpg" alt="Product 10">
+                        <p>$19.99</p>
+                        <h3>Product 10</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/11.jpg" alt="Product 11">
-                    <p>$29.99</p>
-                    <h3>Product 11</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/TAKK0190-cr-450x672.jpg" alt="Product 11">
+                        <p>$29.99</p>
+                        <h3>Product 11</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/12.jpg" alt="Product 12">
-                    <p>$39.99</p>
-                    <h3>Product 12</h3>
-                </a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/13.jpg" alt="Product 13">
-                    <p>$49.99</p>
-                    <h3>Product 13</h3>
-                </a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/14.jpg" alt="Product 14">
-                    <p>$59.99</p>
-                    <h3>Product 14</h3>
-                </a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/15.jpg" alt="Product 15">
-                    <p>$69.99</p>
-                    <h3>Product 15</h3>
-                </a>
-
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/16.jpg" alt="Product 16">
-                    <p>$79.99</p>
-                    <h3>Product 16</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/image_2026-03-18_19-06-56-cr-450x672.png" alt="Product 12">
+                        <p>$39.99</p>
+                        <h3>Product 12</h3>
+                    </a>
+                </div>
             </div>
 
-            <div id="All-Under-$9.99">
-                <h2>⚡All Under $9.99 🛒</h2>
-                <a href="#">SEE MORE</a>
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/17.jpg" alt="Product 17">
-                    <p>$89.99</p>
-                    <h3>Product 17</h3>
-                </a>
+            <div id="Discover-toys" class="product-section">
+                <div class="section-header">
+                    <h2>👜 Find Your Perfect Color ⭐️</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/11.jpg" alt="Product 11">
-                    <p>$29.99</p>
-                    <h3>Product 11</h3>
-                </a>
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/PTAK0307-cr-450x672.jpg" alt="Toy 1">
+                        <p>$89.99</p>
+                        <h3>Toy & Collectible 1</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/12.jpg" alt="Product 12">
-                    <p>$39.99</p>
-                    <h3>Product 12</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Blind box (3)-cr-450x672.jpg" alt="Blind Box 2">
+                        <p>$29.99</p>
+                        <h3>Blind Box 2</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/13.jpg" alt="Product 13">
-                    <p>$49.99</p>
-                    <h3>Product 13</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Book (4)-cr-450x672.jpg" alt="Stationery Book 3">
+                        <p>$39.99</p>
+                        <h3>Stationery Book 3</h3>
+                    </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/14.jpg" alt="Product 14">
-                    <p>$59.99</p>
-                    <h3>Product 14</h3>
-                </a>
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="JoToys Figure 4">
+                        <p>$49.99</p>
+                        <h3>JoToys Figure 4</h3>
+                    </a>
+                </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/15.jpg" alt="Product 15">
-                    <p>$69.99</p>
-                    <h3>Product 15</h3>
-                </a>
+                <div id="Discover-toys" class="product-section">
+                    <div class="section-header">
+                        <h2>⚡All Under $9.99 🛒</h2>
+                        <a href="#">SEE MORE</a>
+                    </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/16.jpg" alt="Product 16">
-                    <p>$79.99</p>
-                    <h3>Product 16</h3>
-                </a>
-            </div>
+                    <div class="product-grid">
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/PTAK0307-cr-450x672.jpg" alt="Toy 1">
+                            <p>$89.99</p>
+                            <h3>Toy & Collectible 1</h3>
+                        </a>
 
-            <div id="Discover-toys">
-                <h2>🛒 Discover toys, stationery & more 😜</h2>
-                <a href="#">SEE MORE</a>
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/17.jpg" alt="Product 17">
-                    <p>$89.99</p>
-                    <h3>Product 17</h3>
-                </a>
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/Blind box (3)-cr-450x672.jpg" alt="Blind Box 2">
+                            <p>$29.99</p>
+                            <h3>Blind Box 2</h3>
+                        </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/11.jpg" alt="Product 11">
-                    <p>$29.99</p>
-                    <h3>Product 11</h3>
-                </a>
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/Book (4)-cr-450x672.jpg" alt="Stationery Book 3">
+                            <p>$39.99</p>
+                            <h3>Stationery Book 3</h3>
+                        </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/12.jpg" alt="Product 12">
-                    <p>$39.99</p>
-                    <h3>Product 12</h3>
-                </a>
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="JoToys Figure 4">
+                            <p>$49.99</p>
+                            <h3>JoToys Figure 4</h3>
+                        </a>
+                    </div>
+                </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/13.jpg" alt="Product 13">
-                    <p>$49.99</p>
-                    <h3>Product 13</h3>
-                </a>
+                <div id="Discover-toys" class="product-section">
+                    <div class="section-header">
+                        <h2>🛒 Discover toys, stationery & more 😜</h2>
+                        <a href="#">SEE MORE</a>
+                    </div>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/14.jpg" alt="Product 14">
-                    <p>$59.99</p>
-                    <h3>Product 14</h3>
-                </a>
+                    <div class="product-grid">
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/PTAK0307-cr-450x672.jpg" alt="Toy 1">
+                            <p>$89.99</p>
+                            <h3>Toy & Collectible 1</h3>
+                        </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/15.jpg" alt="Product 15">
-                    <p>$69.99</p>
-                    <h3>Product 15</h3>
-                </a>
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/Blind box (3)-cr-450x672.jpg" alt="Blind Box 2">
+                            <p>$29.99</p>
+                            <h3>Blind Box 2</h3>
+                        </a>
 
-                <a href="#" class="product">
-                    <img src="./Src/assets/Img/16.jpg" alt="Product 16">
-                    <p>$79.99</p>
-                    <h3>Product 16</h3>
-                </a>
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/Book (4)-cr-450x672.jpg" alt="Stationery Book 3">
+                            <p>$39.99</p>
+                            <h3>Stationery Book 3</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="JoToys Figure 4">
+                            <p>$49.99</p>
+                            <h3>JoToys Figure 4</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div id="category-grid">
-
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/1.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/1.jpg" alt="Lifestyle" class="category-image">
                 </a>
 
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/2.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/2.jpg" alt="Sportlife" class="category-image">
                 </a>
 
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/3.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/3.jpg" alt="Smart Casual" class="category-image">
                 </a>
 
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/4.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/4.jpg" alt="Bags" class="category-image">
                 </a>
 
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/5.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/5.jpg" alt="Soft Living" class="category-image">
                 </a>
 
                 <a href="#" class="category-card">
-                    <img src="./Src/assets/Img/clothes/6.jpg" alt="Category 1" class="category-image">
+                    <img src="./Src/assets/Img/clothes/6.jpg" alt="Shoes" class="category-image">
                 </a>
+            </div>
 
+            <div class="products">
+                <div id="Biggest-Savings-Ever" class="product-section">
+                    <div class="section-header">
+                        <h2>🔥 On Trend Styles 🔥</h2>
+                        <a href="#">SEE MORE</a>
+                    </div>
+
+                    <div class="product-grid">
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/STU_1285-cr-450x672.jpg" alt="Product 1">
+                            <p>$19.99</p>
+                            <h3>Product 1</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/STU_1758-cr-450x672.jpg" alt="Product 2">
+                            <p>$29.99</p>
+                            <h3>Product 2</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/STU_2210-cr-450x672.jpg" alt="Product 3">
+                            <p>$39.99</p>
+                            <h3>Product 3</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/STU_2707-cr-450x672.jpg" alt="Product 4">
+                            <p>$49.99</p>
+                            <h3>Product 4</h3>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="Everyday-Accessories" class="product-section">
+                    <div class="section-header">
+                        <h2>😍 Design Your Dream Home 🛍</h2>
+                        <a href="#">SEE MORE</a>
+                    </div>
+
+                    <div class="product-grid">
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/10S26CAP012 - BLACK (2)-cr-450x672.jpg" alt="Product 9">
+                            <p>$9.99</p>
+                            <h3>Product 9</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/BV (2)-cr-450x672.jpg" alt="Product 10">
+                            <p>$19.99</p>
+                            <h3>Product 10</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/TAKK0190-cr-450x672.jpg" alt="Product 11">
+                            <p>$29.99</p>
+                            <h3>Product 11</h3>
+                        </a>
+
+                        <a href="#" class="product">
+                            <span class="discount-label">-50%</span>
+                            <img src="./Src/assets/Img/clothes/TAKK0932-cr-450x672.jpg" alt="Product 12">
+                            <p>$39.99</p>
+                            <h3>Product 12</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <div class="section-header">
+                    <h2>😎 Bold & Trending Styles ♠️</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
+
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Toy (1)-cr-450x672.jpg" alt="Product 1">
+                        <p>$89.99</p>
+                        <h3>Toy & Collectible 1</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Blind box (2)-cr-450x672.jpg" alt="Product 2">
+                        <p>$29.99</p>
+                        <h3>Blind Box 2</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Book (1)-cr-450x672.jpg" alt="Product 3">
+                        <p>$39.99</p>
+                        <h3>Stationery Book 3</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="Product 4">
+                        <p>$49.99</p>
+                        <h3>JoToys Figure 4</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <div class="section-header">
+                    <h2>💝 Little Princess Collection 👑</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
+
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Toy (1)-cr-450x672.jpg" alt="Product 1">
+                        <p>$89.99</p>
+                        <h3>Toy & Collectible 1</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Blind box (2)-cr-450x672.jpg" alt="Product 2">
+                        <p>$29.99</p>
+                        <h3>Blind Box 2</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Book (1)-cr-450x672.jpg" alt="Product 3">
+                        <p>$39.99</p>
+                        <h3>Stationery Book 3</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="Product 4">
+                        <p>$49.99</p>
+                        <h3>JoToys Figure 4</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <div class="section-header">
+                    <h2>Footwear Savings, Every Day Vibes 👟</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
+
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Toy (1)-cr-450x672.jpg" alt="Product 1">
+                        <p>$89.99</p>
+                        <h3>Toy & Collectible 1</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Blind box (2)-cr-450x672.jpg" alt="Product 2">
+                        <p>$29.99</p>
+                        <h3>Blind Box 2</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Book (1)-cr-450x672.jpg" alt="Product 3">
+                        <p>$39.99</p>
+                        <h3>Stationery Book 3</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="Product 4">
+                        <p>$49.99</p>
+                        <h3>JoToys Figure 4</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <div class="section-header">
+                    <h2>😚 Your Next Favorite Is Here ✨</h2>
+                    <a href="#">SEE MORE</a>
+                </div>
+
+                <div class="product-grid">
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Toy (1)-cr-450x672.jpg" alt="Product 1">
+                        <p>$89.99</p>
+                        <h3>Toy & Collectible 1</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Blind box (2)-cr-450x672.jpg" alt="Product 2">
+                        <p>$29.99</p>
+                        <h3>Blind Box 2</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/Book (1)-cr-450x672.jpg" alt="Product 3">
+                        <p>$39.99</p>
+                        <h3>Stationery Book 3</h3>
+                    </a>
+
+                    <a href="#" class="product">
+                        <span class="discount-label">-50%</span>
+                        <img src="./Src/assets/Img/clothes/JOTOYS (1)-cr-450x672.jpg" alt="Product 4">
+                        <p>$49.99</p>
+                        <h3>JoToys Figure 4</h3>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Top 5 Columns -->
+            <div class="footer-top">
+                <!-- Column 1: ZANDO APP -->
+                <div class="footer-col">
+                    <h4 class="footer-title">ZANDO APP</h4>
+                    <div class="qr-code-box">
+                        <svg viewBox="0 0 100 100" class="qr-svg" width="90" height="90">
+                            <rect width="100" height="100" fill="#ffffff" />
+                            <!-- QR Finder Patterns -->
+                            <rect x="8" y="8" width="28" height="28" fill="#000" />
+                            <rect x="12" y="12" width="20" height="20" fill="#fff" />
+                            <rect x="16" y="16" width="12" height="12" fill="#000" />
+                            <rect x="64" y="8" width="28" height="28" fill="#000" />
+                            <rect x="68" y="12" width="20" height="20" fill="#fff" />
+                            <rect x="72" y="16" width="12" height="12" fill="#000" />
+                            <rect x="8" y="64" width="28" height="28" fill="#000" />
+                            <rect x="12" y="68" width="20" height="20" fill="#fff" />
+                            <rect x="16" y="72" width="12" height="12" fill="#000" />
+                            <!-- QR Data Elements -->
+                            <rect x="40" y="8" width="4" height="4" fill="#000" />
+                            <rect x="48" y="8" width="8" height="4" fill="#000" />
+                            <rect x="40" y="16" width="8" height="4" fill="#000" />
+                            <rect x="52" y="16" width="4" height="8" fill="#000" />
+                            <rect x="44" y="24" width="4" height="8" fill="#000" />
+                            <rect x="52" y="28" width="8" height="4" fill="#000" />
+                            <rect x="8" y="40" width="8" height="4" fill="#000" />
+                            <rect x="20" y="40" width="4" height="8" fill="#000" />
+                            <rect x="28" y="40" width="8" height="4" fill="#000" />
+                            <rect x="40" y="36" width="8" height="8" fill="#000" />
+                            <rect x="52" y="36" width="4" height="4" fill="#000" />
+                            <rect x="64" y="40" width="8" height="4" fill="#000" />
+                            <rect x="76" y="40" width="16" height="4" fill="#000" />
+                            <rect x="8" y="48" width="4" height="8" fill="#000" />
+                            <rect x="16" y="52" width="12" height="4" fill="#000" />
+                            <rect x="36" y="48" width="4" height="8" fill="#000" />
+                            <rect x="48" y="44" width="12" height="4" fill="#000" />
+                            <rect x="64" y="48" width="8" height="8" fill="#000" />
+                            <rect x="76" y="48" width="4" height="4" fill="#000" />
+                            <rect x="84" y="52" width="8" height="4" fill="#000" />
+                            <rect x="40" y="60" width="4" height="12" fill="#000" />
+                            <rect x="48" y="64" width="8" height="4" fill="#000" />
+                            <rect x="60" y="60" width="4" height="8" fill="#000" />
+                            <rect x="68" y="64" width="8" height="8" fill="#000" />
+                            <rect x="80" y="60" width="12" height="4" fill="#000" />
+                            <rect x="84" y="68" width="8" height="8" fill="#000" />
+                            <rect x="44" y="76" width="8" height="8" fill="#000" />
+                            <rect x="56" y="72" width="8" height="4" fill="#000" />
+                            <rect x="56" y="80" width="12" height="4" fill="#000" />
+                            <rect x="72" y="76" width="8" height="8" fill="#000" />
+                            <rect x="84" y="80" width="8" height="12" fill="#000" />
+                            <rect x="40" y="88" width="8" height="4" fill="#000" />
+                            <rect x="52" y="88" width="4" height="4" fill="#000" />
+                            <rect x="64" y="88" width="8" height="4" fill="#000" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Column 2: LOYALTY -->
+                <div class="footer-col">
+                    <h4 class="footer-title">LOYALTY</h4>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                    </path>
+                                </svg>
+                                <span>Membership & Benefits</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: FOLLOW US -->
+                <div class="footer-col">
+                    <h4 class="footer-title">FOLLOW US</h4>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path
+                                        d="M14.5 9h-2a1.5 1.5 0 0 0-1.5 1.5V13H9.5v2H11v6h2v-6h1.5l.5-2H13v-1.5a.5.5 0 0 1 .5-.5h1V9z">
+                                    </path>
+                                </svg>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                </svg>
+                                <span>TikTok</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                    </path>
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor">
+                                    </polygon>
+                                </svg>
+                                <span>Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: CUSTOMER SERVICES -->
+                <div class="footer-col">
+                    <h4 class="footer-title">CUSTOMER SERVICES</h4>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                <span>Online exchange policy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Privacy Policy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                                <span>FAQs & guides</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Find a store</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: CONTACT US -->
+                <div class="footer-col">
+                    <h4 class="footer-title">CONTACT US</h4>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="mailto:customer.care@zandokh.com">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>customer.care@zandokh.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+855085330330">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                <span>(+855) 085 330 330</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="footer-icon">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span>Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section: WE ACCEPT -->
+            <div class="footer-bottom">
+                <h4 class="footer-title">WE ACCEPT</h4>
+                <div class="payment-methods">
+                    <!-- Row 1 -->
+                    <div class="payment-row">
+                        <span class="pay-card aba-pay">ABA PAY</span>
+                        <span class="pay-card visa-card">VISA</span>
+                        <span class="pay-card mastercard">
+                            <span class="circle circle-red"></span>
+                            <span class="circle circle-orange"></span>
+                        </span>
+                        <span class="pay-card unionpay">UnionPay</span>
+                        <span class="pay-card jcb">JCB</span>
+                        <span class="pay-card wing-card">wing</span>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="payment-row">
+                        <span class="pay-card wing-bank">wing bank</span>
+                        <span class="pay-card chip-mong">
+                            <span class="chip-c">C</span>
+                        </span>
+                        <div class="pay-text-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                class="pay-icon">
+                                <line x1="3" y1="21" x2="21" y2="21"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <polyline points="5 6 12 3 19 6"></polyline>
+                                <line x1="6" y1="10" x2="6" y2="21"></line>
+                                <line x1="10" y1="10" x2="10" y2="21"></line>
+                                <line x1="14" y1="10" x2="14" y2="21"></line>
+                                <line x1="18" y1="10" x2="18" y2="21"></line>
+                            </svg>
+                            <span>Bank Transfer</span>
+                        </div>
+                        <div class="pay-text-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                class="pay-icon">
+                                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M6 12h.01M18 12h.01"></path>
+                            </svg>
+                            <span>Cash on Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchToggle = document.getElementById('search-toggle');
+            const searchInput = document.getElementById('searchOverlayInput');
+            const searchTrigger = document.getElementById('searchTrigger');
+            const searchCloseBtn = document.getElementById('searchCloseBtn');
+
+            if (searchToggle && searchInput) {
+                searchToggle.addEventListener('change', function () {
+                    if (this.checked) {
+                        setTimeout(() => searchInput.focus(), 100);
+                    } else {
+                        searchInput.value = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && searchToggle.checked) {
+                        searchToggle.checked = false;
+                        searchInput.value = '';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
