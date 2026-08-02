@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-left ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-left ul li a:hover {
+    color: #555;
+}
+
+.nav-center.Logo {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-center.Logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.Search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    stroke: #888;
+}
+
+.Search input {
+    width: 240px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0 10px 0 40px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.Search input:focus {
+    border-color: #aaa;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons>div>a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-icons>div>a:hover {
+    color: #000;
+}
+
+.nav-icons svg {
+    width: 22px;
+    height: 22px;
+    stroke: #111;
+    stroke-width: 1.5;
+}
+
+.Order a {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #e60000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+}
+
+.User {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.User a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b2239;
+}
+
+.User a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#Img-Main-Container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#Img-Main-Container>img {
+    width: 1426px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+#btn-container {
+    position: absolute;
+    bottom: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+#btn-container button {
+    width: 160px;
+    height: 46px;
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+#btn-container button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.hidden-radio {
+    display: none;
+}
+
+.brands-slider-wrapper {
+    position: relative;
+    width: 1426px;
+    max-width: 100%;
+    margin: 30px auto 50px auto;
+    overflow: hidden;
+}
+
+#Img-Container {
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    --slide-x: 0px;
+}
+
+.brands-slider-wrapper .prev-brand-btn,
+.brands-slider-wrapper .next-brand-btn {
+    display: none !important;
+}
+
+/* Slide 1 is active: show next-to-2 */
+#brand-slide-1:checked~.brands-slider-wrapper #btn-next-to-2 {
+    display: flex !important;
+}
+
+#brand-slide-1:checked~.brands-slider-wrapper #Img-Container {
+    --slide-x: 0px;
+}
+
+/* Slide 2 is active: show prev-to-1 and next-to-3 */
+#brand-slide-2:checked~.brands-slider-wrapper #btn-prev-to-1 {
+    display: flex !important;
+}
+
+#brand-slide-2:checked~.brands-slider-wrapper #btn-next-to-3 {
+    display: flex !important;
+}
+
+#brand-slide-2:checked~.brands-slider-wrapper #Img-Container {
+    --slide-x: -900px;
+}
+
+/* Slide 3 is active: show prev-to-2 (next is hidden because it's the end) */
+#brand-slide-3:checked~.brands-slider-wrapper #btn-prev-to-2 {
+    display: flex !important;
+}
+
+#brand-slide-3:checked~.brands-slider-wrapper #Img-Container {
+    --slide-x: -1800px;
+}
+
+.prev-brand-btn,
+.next-brand-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.prev-brand-btn {
+    left: 20px;
+}
+
+.next-brand-btn {
+    right: 20px;
+}
+
+.prev-brand-btn:hover,
+.next-brand-btn:hover {
+    background-color: #000;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.prev-brand-btn svg,
+.next-brand-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+#Img-Container .img-container {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transform: translateX(var(--slide-x));
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#Img-Container .img-container:hover {
+    transform: translateX(var(--slide-x)) scale(1.05);
+}
+
+#Img-Container .img-container img {
+    height: 180px;
+    width: auto;
+    display: block;
+    border-radius: 8px;
+}
