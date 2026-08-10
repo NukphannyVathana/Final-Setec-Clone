@@ -770,6 +770,9 @@ header {
     width: 1426px;
     max-width: 100%;
     margin: 30px auto 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -782,82 +785,7 @@ header {
     --slide-x: 0px;
 }
 
-.brands-slider-wrapper .prev-brand-btn,
-.brands-slider-wrapper .next-brand-btn {
-    display: none !important;
-}
-
-/* Slide 1 is active: show next-to-2 */
-#brand-slide-1:checked~.brands-slider-wrapper #btn-next-to-2 {
-    display: flex !important;
-}
-
-#brand-slide-1:checked~.brands-slider-wrapper #Img-Container {
-    --slide-x: 0px;
-}
-
-/* Slide 2 is active: show prev-to-1 and next-to-3 */
-#brand-slide-2:checked~.brands-slider-wrapper #btn-prev-to-1 {
-    display: flex !important;
-}
-
-#brand-slide-2:checked~.brands-slider-wrapper #btn-next-to-3 {
-    display: flex !important;
-}
-
-#brand-slide-2:checked~.brands-slider-wrapper #Img-Container {
-    --slide-x: -900px;
-}
-
-/* Slide 3 is active: show prev-to-2 (next is hidden because it's the end) */
-#brand-slide-3:checked~.brands-slider-wrapper #btn-prev-to-2 {
-    display: flex !important;
-}
-
-#brand-slide-3:checked~.brands-slider-wrapper #Img-Container {
-    --slide-x: -1800px;
-}
-
-.prev-brand-btn,
-.next-brand-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    background-color: rgba(0, 0, 0, 0.85);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
-    color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.prev-brand-btn {
-    left: 20px;
-}
-
-.next-brand-btn {
-    right: 20px;
-}
-
-.prev-brand-btn:hover,
-.next-brand-btn:hover {
-    background-color: #000;
-    transform: translateY(-50%) scale(1.15);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.prev-brand-btn svg,
-.next-brand-btn svg {
-    width: 24px;
-    height: 24px;
-}
+/* Removed prev/next brand button styles and display rules; buttons removed from HTML. */
 
 #Img-Container .img-container {
     flex: 0 0 auto;
